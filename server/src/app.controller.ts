@@ -1,6 +1,6 @@
 import { Controller, Get, UseGuards } from '@nestjs/common';
-import { AppService } from './app.service';
 import { ClerkAuthGuard } from './clerk-auth.guard';
+import { AppService } from './app.service';
 
 @Controller()
 export class AppController {
@@ -8,7 +8,8 @@ export class AppController {
 
   @Get()
   @UseGuards(ClerkAuthGuard)
-  async getUsers() {
+  async getUsers()
+  {
     return this.appService.getUsers();
   }
 }

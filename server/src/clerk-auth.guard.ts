@@ -7,15 +7,18 @@ import {
 } from '@nestjs/common';
 
 @Injectable()
-export class ClerkAuthGuard implements CanActivate {
+export class ClerkAuthGuard implements CanActivate 
+{
   private readonly logger = new Logger();
-
-  async canActivate(context: ExecutionContext) {
+  async canActivate(context: ExecutionContext) 
+  {
     const request = context.switchToHttp().getRequest();
-
-    try {
+    try 
+    {
       await clerkClient.verifyToken(request.cookies.__session);
-    } catch (err) {
+    } 
+    catch (err) 
+    {
       this.logger.error(err);
       return false;
     }

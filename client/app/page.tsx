@@ -2,7 +2,8 @@ import { UserButton, UserProfile, auth, currentUser } from "@clerk/nextjs";
 import { User } from "@clerk/nextjs/server";
 import getUsers from "./get-users";
 
-export default async function Home() {
+export default async function Home() 
+{
   const authDetails = auth();
   const user = await currentUser();
   const allUsers = await getUsers();

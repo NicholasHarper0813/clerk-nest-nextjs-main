@@ -1,5 +1,6 @@
 import clerkClient from '@clerk/clerk-sdk-node';
-import {
+import 
+{
   CanActivate,
   ExecutionContext,
   Injectable,

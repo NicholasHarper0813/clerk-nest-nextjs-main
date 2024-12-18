@@ -4,13 +4,8 @@ import getUsers from "./get-users";
 
 export default async function Home() {
   const authDetails = auth();
-  console.log(authDetails);
-
   const user = await currentUser();
-  console.log(user);
-
   const allUsers = await getUsers();
-  console.log(allUsers);
 
   return (
     <div className="h-screen flex items-center justify-center flex-col gap-5">

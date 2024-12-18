@@ -1,7 +1,5 @@
 "use client";
-
 import { useAuth, useUser } from "@clerk/nextjs";
-
 export default function User() 
 {
   const auth = useAuth();

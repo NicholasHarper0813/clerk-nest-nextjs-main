@@ -5,8 +5,8 @@ import getUsers from "./get-users";
 export default async function Home() 
 {
   const authDetails = auth();
-  const user = await currentUser();
   const allUsers = await getUsers();
+  const user = await currentUser();
 
   return (
     <div className="h-screen flex items-center justify-center flex-col gap-5">

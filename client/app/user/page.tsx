@@ -2,8 +2,8 @@
 import { useAuth, useUser } from "@clerk/nextjs";
 export default function User() 
 {
-  const auth = useAuth();
   const user = useUser();
+  const auth = useAuth();
 
   return (
     <h1>
